@@ -21,8 +21,8 @@ jobs:
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: "275.0.0"
-          service_account_email: $GCP_SERVICE_ACCOUNT_EMAIL
-          service_account_key: $GCP_SERVICE_ACCOUNT_KEY
+          service_account_email: "$GCP_SERVICE_ACCOUNT_EMAIL"
+          service_account_key: "$GCP_SERVICE_ACCOUNT_KEY"
 
       - name: Configure docker to use the gcloud cli
         run: gcloud auth configure-docker --quiet
