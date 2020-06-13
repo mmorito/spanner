@@ -8,9 +8,8 @@ import (
 type UseCase func()
 
 func (uc *UseCase) helloworld() (string, error) {
-	log := logger.GetLogger()
 
-	log.Infof("Hello")
-	log.Warnf("World")
+	logger.Log.Infof("Hello")
+	logger.Log.Warnf("World")
 	return "hello world!", nil
 }

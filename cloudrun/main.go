@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/mmorito/spanner/middleware"
 	"github.com/mmorito/spanner/routes"
 	"github.com/mmorito/spanner/utilities/logger"
 
@@ -17,6 +18,8 @@ func main() {
 
 	// router
 	routes.Router(e)
+
+	e.Use(middleware.SetupLogger)
 
 	// init
 	initHandler(e)

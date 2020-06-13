@@ -8,7 +8,7 @@ import (
 	log "github.com/yfuruyama/stackdriver-request-context-log"
 )
 
-var logger *log.ContextLogger
+var Log *log.ContextLogger
 
 func Init(e *echo.Echo) http.Handler {
 	config := log.NewConfig(os.Getenv("PROJECT_ID"))
@@ -20,9 +20,5 @@ func Init(e *echo.Echo) http.Handler {
 }
 
 func SetupLogger(request *http.Request) {
-	logger = log.RequestContextLogger(request)
-}
-
-func GetLogger() *log.ContextLogger {
-	return logger
+	Log = log.RequestContextLogger(request)
 }
