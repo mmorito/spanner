@@ -1,7 +1,7 @@
 package helloworld
 
 import (
-	"github.com/mmorito/spanner/utilities/logger"
+	"github.com/mmorito/spanner/src/utilities/logger"
 )
 
 // UseCase struct

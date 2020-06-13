@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/mmorito/spanner/middleware"
-	"github.com/mmorito/spanner/routes"
-	"github.com/mmorito/spanner/utilities/logger"
+	"github.com/mmorito/spanner/src/middleware"
+	"github.com/mmorito/spanner/src/routes"
+	"github.com/mmorito/spanner/src/utilities/logger"
 
 	"github.com/labstack/echo/v4"
 )

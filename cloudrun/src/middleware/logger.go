@@ -3,7 +3,7 @@ package middleware
 import (
 	"github.com/labstack/echo/v4"
 
-	"github.com/mmorito/spanner/utilities/logger"
+	"github.com/mmorito/spanner/src/utilities/logger"
 )
 
 // SetupLogger middleware

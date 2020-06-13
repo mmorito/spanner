@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/mmorito/spanner/apis/apis/helloworld"
+	"github.com/mmorito/spanner/src/apis/apis/helloworld"
 )
 
 // type Template struct {
