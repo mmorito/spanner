@@ -30,7 +30,7 @@ jobs:
         run: docker build --target deployment -t $IMAGE_TAG_NAME .
 
       - name: Push the docker image
-        run: docker -- push $IMAGE
+        run: docker -- push $IMAGE_TAG_NAME
       # Comment in this job If you want to automate the switching of Cloud Run version
       # - name: Deploy to Cloud Run
       #   run: |
