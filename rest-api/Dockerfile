@@ -25,8 +25,8 @@ RUN add-apt-repository ppa:longsleep/golang-backports
 RUN apt-get install -y golang-1.13
 
 # work directory
-RUN mkdir /cloudrun
-WORKDIR /cloudrun
+RUN mkdir /rest-api
+WORKDIR /rest-api
 
 ENV GOPATH $HOME/go
 ENV PATH $GOPATH/bin:$GOPATH/src/app:/usr/lib/go-1.13/bin:$PATH
@@ -46,7 +46,7 @@ FROM alpine:3.9 as deployment
 RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
 
 WORKDIR /app
-COPY --from=builder /cloudrun/bin/ ./
+COPY --from=builder /rest-api/bin/ ./
 
 CMD ["./app"]
 EXPOSE 8080
